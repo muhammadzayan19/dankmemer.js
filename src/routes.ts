@@ -25,11 +25,22 @@ export class BaseRoute<T extends BaseEntity> {
   ) {}
 
   async query(filter?: EntityPredicate<T>): Promise<T[]> {
-    const data = await this.client.get<T[]>(this.path);
-    if (!filter) return data;
-    return data.filter(filter);
+    const data = await this.client.get<Record<string, T> | T[]>(this.path);
+    
+    // Convert object to array if needed
+    let items: T[];
+    if (Array.isArray(data)) {
+      items = data;
+    } else {
+      items = Object.values(data);
+    }
+    
+    if (!filter) return items;
+    return items.filter(filter);
   }
 }
+
+// -------------------- Routes --------------------
 
 export class ItemsRoute extends BaseRoute<Item> {
   constructor(client: HttpClient) {
