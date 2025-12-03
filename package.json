@@ -1,22 +1,24 @@
 {
   "name": "dankmemer.js",
-  "version": "0.1.0",
-  "description": "TypeScript wrapper for the DankAlert 'Dank Memer Data API'",
+  "version": "1.0.1",
+  "description": "A lightweight TypeScript wrapper for the DankAlert API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
-  "keywords": [
-    "dankmemer",
-    "dank",
-    "api",
-    "wrapper",
-    "typescript"
-  ],
-  "author": "You",
+  "keywords": ["dankmemer", "discord", "api"],
+  "author": "Muhammad Zayan",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadzayan19/dankmemer.js.git"
+  },
+  "homepage": "https://github.com/muhammadzayan19/dankmemer.js#readme",
+  "dependencies": {},
   "devDependencies": {
-    "typescript": "^5.6.0"
+    "typescript": "^5.0.0"
   }
 }
