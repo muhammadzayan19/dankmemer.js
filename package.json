@@ -1,5 +1,5 @@
 {
-  "name": "dankmemer.js",
+  "name": "@muhammadzayan19/dankmemer.js",
   "version": "1.0.1",
   "description": "A lightweight TypeScript wrapper for the DankAlert API",
   "main": "dist/index.js",
@@ -17,6 +17,9 @@
     "url": "git+https://github.com/muhammadzayan19/dankmemer.js.git"
   },
   "homepage": "https://github.com/muhammadzayan19/dankmemer.js#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {},
   "devDependencies": {
     "typescript": "^5.0.0"
